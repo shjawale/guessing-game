@@ -4,10 +4,16 @@ fn main() {
     println!("Guess the number!");
     println!("Please input your guess");
 
-    let mut guess = String::new();
-
+    let mut input = String::new();
     let stdin = io::stdin();
-    stdin.read_line(&mut guess).expect("Failed to read line");
+    stdin.read_line(&mut input).expect("Failed to read line");
+    println!("{input}");
 
-    println!("You guessed: {guess}");
+    let zero = String::from("0");
+    //let nine = String::from("9");
+    if input < zero {
+        println!("invalid input. try again.");
+    }
+    
+    
 }
